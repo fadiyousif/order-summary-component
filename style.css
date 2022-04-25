@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+   --white: #fff;
+   --mostly-white-blue: #f7f9ff;
+   --pale-blue: #e0e8ff;
+   --bright-blue: #382ae1;
+   --soft-blue: #766cf1;
+   --desaturated-blue: #717fa6;
+   --dark-blue: #1f2e55;
+   --fs-sm: 14px;
+   --fs-md: 16px;
+   --medium: 500;
+   --bold: 700;
+   --heavy: 900;
+   --spacing-sm: 10px;
+   --spacing-md: 15px;
+   --spacing-lg: 20px;
+   --radius-sm: 10px;
+   --radius-lg: 20px;
+}
+
+* {
+   box-sizing: border-box;
+   font-size: var(--fs-md);
+   font-family: "Red Hat Display", sans-serif;
+   font-weight: var(--medium);
+   margin: 0;
+}
+
+body {
+   background-color: var(--pale-blue);
+   background-image: url(./images/pattern-background-desktop.svg);
+   background-size: 100%;
+   background-position-y: -80px;
+   background-repeat: no-repeat;
+   color: var(--desaturated-blue);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+.card {
+   background-color: var(--white);
+   width: 450px;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   border-radius: var(--radius-lg);
+   overflow: hidden;
+   box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
+}
+
+.illustration-hero {
+   background-color: var(--bright-blue);
+}
+
+.container {
+   padding: 20px 30px 25px;
+}
+
+h1 {
+   line-height: normal;
+   color: var(--dark-blue);
+   font-size: 28px;
+   font-weight: var(--heavy);
+}
+
+p {
+   width: 80%;
+   margin: auto;
+   margin-top: var(--spacing-sm);
+   margin-bottom: var(--spacing-lg);
+}
+
+.price-plan {
+   display: flex;
+   background-color: var(--mostly-white-blue);
+   border-radius: var(--radius-sm);
+   padding: var(--spacing-md);
+   margin-bottom: var(--spacing-lg);
+}
+
+.icon-music {
+   margin-right: var(--spacing-lg);
+}
+
+.details-container {
+   display: flex;
+   flex: 1;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.plan-heading {
+   color: var(--dark-blue);
+   font-weight: var(--heavy);
+   line-height: 1.7;
+}
+
+.btn {
+   transition: all 500ms;
+}
+
+.change-btn {
+   color: var(--bright-blue);
+   font-size: var(--fs-sm);
+   font-weight: var(--bold);
+}
+
+.change-btn:hover {
+   color: var(--soft-blue);
+   text-decoration: none;
+}
+
+.proceed-btn {
+   background-color: var(--bright-blue);
+   color: var(--white);
+   cursor: pointer;
+   font-weight: var(--heavy);
+   width: 100%;
+   border: none;
+   border-radius: var(--radius-sm);
+   padding: var(--spacing-md) 0;
+   margin-bottom: var(--spacing-lg);
+   box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+}
+
+.proceed-btn:hover {
+   background-color: var(--soft-blue);
+}
+
+.cancel-btn {
+   color: var(--desaturated-blue);
+   text-decoration: none;
+   font-weight: var(--heavy);
+}
+
+.cancel-btn:hover {
+   color: var(--dark-blue);
+}
+
+@media (max-width: 500px) {
+   .card {
+      width: 90%;
+   }
+
+   h1 {
+      font-size: 26px;
+   }
+
+   p {
+      width: unset;
+   }
+}
+
+@media (max-width: 350px) {
+   h1 {
+      font-size: 24px;
+   }
+
+   p {
+      font-size: var(--fs-sm);
+   }
+
+   .icon-music {
+      margin-right: var(--spacing-sm);
+   }
+
+   .details > * {
+      font-size: var(--fs-sm);
+   }
+
+   .plan-heading {
+      line-height: unset;
+   }
+
+   .proceed-btn {
+      font-size: 15px;
+   }
+
+   .cancel-btn {
+      font-size: var(--fs-sm);
+   }
+
+   .change-btn {
+      font-size: 12px;
+   }
+}
